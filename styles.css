@@ -3,13 +3,30 @@
     border: 2px solid black;
     width: 350px;
     height: 80px;
+    flex-direction: column;
     margin: 25px 25px 25px 25px;
     justify-content: right;
+    
     border-radius: 8px;
-    align-items: center;
-    font-size: 30px;
+    align-items:flex-end;
+    
     background-color: white;
 }
+.input, .output{
+    padding-right: 10px;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 3px;
+    color: rgb(71, 46, 46)
+      
+}
+
+.input{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(42, 85, 42)  
+}
+
 
 body{
 
