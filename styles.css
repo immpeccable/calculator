@@ -12,6 +12,9 @@
     
     background-color: white;
 }
+body{
+    background-color: rgb(46, 100, 114);
+}
 .input, .output{
     padding-right: 10px;
     font-size: 35px;
