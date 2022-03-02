@@ -157,8 +157,9 @@ for(let i = 0; i<btns.length; i++){
 
 function calculationFunc(str){
 
+    console.log("esittir str: "+str);
     let flag = 1;
-    console.log(str);
+    //console.log(str);
     if(str.length == 0){
         return;
     }
@@ -194,17 +195,15 @@ function calculationFunc(str){
                     tpresult = op1/op2;
                 }
                 str = str.substring(0, leftside + 1) + tpresult + str.substring(rightside, str.length);
-                //console.log(tpresult);
                 break;
-                //console.log(leftside + " " + rightside);
-                //console.log(op1 + " " +  op2);
+                
 
             }
         }
         
     }
     
-    console.log("last form: " + str);
+    //console.log("last form: " + str);
     let newlen = str.length;
     let op1 = "";
     let op2 = "";
@@ -212,7 +211,7 @@ function calculationFunc(str){
     for(let i = 0; i<newlen; i++){
         
         if(str[i] == '+'){
-            console.log("first op1: "+ op1+ " op2: "+op2);
+            //console.log("first op1: "+ op1+ " op2: "+op2);
             if(fflag == 0){
                 result += parseFloat(op2);
                 op1 = result;
@@ -227,7 +226,7 @@ function calculationFunc(str){
             fflag = 0;
         }
         else if(str[i] == '-'){
-            console.log("second op1: "+ op1+ " op2: "+op2);
+            //console.log("second op1: "+ op1+ " op2: "+op2);
             if(fflag == 0){
                 result += parseFloat(op2);
                 op1 = result;
@@ -254,9 +253,8 @@ function calculationFunc(str){
         }
 
     }
-    /*console.log("op1" + op1 + " op2: " + op2);
-    console.log("result: " + result);*/
-    console.log(fflag);
+
+    //console.log(fflag);
     if(fflag == 0){
         result+= parseFloat(op2)
     }
@@ -295,10 +293,13 @@ function clearFunc(){
 function deleteeFunc(){
     
     let currentStr = input.textContent;
+    calculateStr = calculateStr.toString();
+    console.log("calculatefrst str: "+calculateStr);
     let len = currentStr.length;
     let len2 = calculateStr.length;    //console.log(len);
     if(len == 1){
         input.textContent = "0";
+        calculateStr = "";
         initial = 1;
         return;
     }
@@ -309,7 +310,7 @@ function deleteeFunc(){
     }
     calculateStr = calculateStr.substring(0, len2 - 1);
     
-    //console.log(currentStr.substring(0, len - 1))
+    console.log("calculate str: "+calculateStr);
 }
 
 
