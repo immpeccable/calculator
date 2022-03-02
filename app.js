@@ -157,7 +157,7 @@ for(let i = 0; i<btns.length; i++){
 
 function calculationFunc(str){
 
-    console.log("esittir str: "+str);
+    //console.log("esittir str: "+str);
     let flag = 1;
     //console.log(str);
     if(str.length == 0){
@@ -294,7 +294,7 @@ function deleteeFunc(){
     
     let currentStr = input.textContent;
     calculateStr = calculateStr.toString();
-    console.log("calculatefrst str: "+calculateStr);
+    //console.log("calculatefrst str: "+calculateStr);
     let len = currentStr.length;
     let len2 = calculateStr.length;    //console.log(len);
     if(len == 1){
@@ -310,7 +310,7 @@ function deleteeFunc(){
     }
     calculateStr = calculateStr.substring(0, len2 - 1);
     
-    console.log("calculate str: "+calculateStr);
+    //console.log("calculate str: "+calculateStr);
 }
 
 
